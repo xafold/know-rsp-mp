@@ -12,9 +12,9 @@ import {
 } from "../../utils";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 type MetricConfig = {
@@ -133,8 +133,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: PageProps) {
-  const metric = metrics[params.slug];
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const metric = metrics[slug];
   if (!metric) return {};
 
   return {
@@ -143,8 +144,9 @@ export function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default function LeaderboardPage({ params }: PageProps) {
-  const metric = metrics[params.slug];
+export default async function LeaderboardPage({ params }: PageProps) {
+  const { slug } = await params;
+  const metric = metrics[slug];
 
   if (!metric) {
     notFound();
