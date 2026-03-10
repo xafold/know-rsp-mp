@@ -1,21 +1,21 @@
 "use client";
 
+import { getCandidates } from "@/lib/getCandidates";
+import type { Candidate, EducationLevel } from "@/lib/types";
 import type { ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
 import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
-  Legend,
+    Bar,
+    BarChart,
+    Cell,
+    Legend,
+    Pie,
+    PieChart,
+    ResponsiveContainer,
+    Tooltip,
+    XAxis,
+    YAxis,
 } from "recharts";
-import { getCandidates } from "@/lib/getCandidates";
-import type { Candidate, EducationLevel } from "@/lib/types";
 
 const COLORS = [
   "#1a4fa0",
@@ -94,7 +94,8 @@ type ProvinceSummary = {
 function getTopEducation(candidate: Candidate): EducationLevel | null {
   if (!candidate.education || candidate.education.length === 0) return null;
   const sorted = [...candidate.education].sort(
-    (a, b) => EDUCATION_ORDER.indexOf(b.level) - EDUCATION_ORDER.indexOf(a.level)
+    (a, b) =>
+      EDUCATION_ORDER.indexOf(b.level) - EDUCATION_ORDER.indexOf(a.level),
   );
   return sorted[0]?.level ?? null;
 }
@@ -116,7 +117,9 @@ function average(values: number[]): number {
   return values.reduce((sum, value) => sum + value, 0) / values.length;
 }
 
-function toPerformanceCandidate(candidate: Candidate): PerformanceCandidate | null {
+function toPerformanceCandidate(
+  candidate: Candidate,
+): PerformanceCandidate | null {
   if (
     candidate.electionType !== "FPTP" ||
     candidate.votesReceived == null ||
@@ -131,7 +134,9 @@ function toPerformanceCandidate(candidate: Candidate): PerformanceCandidate | nu
 
   const runnerUpVotes = candidate.runnerUp.votes;
   const runnerUpSharePercent =
-    candidate.totalValidVotes > 0 ? (runnerUpVotes / candidate.totalValidVotes) * 100 : 0;
+    candidate.totalValidVotes > 0
+      ? (runnerUpVotes / candidate.totalValidVotes) * 100
+      : 0;
 
   return {
     id: candidate.id,
@@ -192,13 +197,21 @@ function ChartCard({
   );
 }
 
-function InsightCard({ title, candidate, constituency, value, detail }: InsightItem) {
+function InsightCard({
+  title,
+  candidate,
+  constituency,
+  value,
+  detail,
+}: InsightItem) {
   return (
     <div className="surface-card p-5 sm:p-6">
       <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
         {title}
       </p>
-      <p className="numeric mt-4 text-4xl font-semibold text-foreground">{value}</p>
+      <p className="numeric mt-4 text-4xl font-semibold text-foreground">
+        {value}
+      </p>
       <div className="mt-4 border-t border-border/70 pt-4">
         <p className="text-sm font-semibold text-foreground">{candidate}</p>
         <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
@@ -216,7 +229,9 @@ function SnapshotCard({ label, value, helper }: SnapshotItem) {
       <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
         {label}
       </p>
-      <p className="numeric mt-3 text-3xl font-semibold text-foreground">{value}</p>
+      <p className="numeric mt-3 text-3xl font-semibold text-foreground">
+        {value}
+      </p>
       <p className="mt-2 text-sm leading-6 text-muted-foreground">{helper}</p>
     </div>
   );
@@ -231,44 +246,64 @@ function LeaderboardCard({
   description: string;
   items: LeaderboardItem[];
 }) {
+  const [expanded, setExpanded] = useState(false);
+  const visibleItems = expanded ? items : items.slice(0, TOP_LIST_SIZE);
+  const hasMore = items.length > TOP_LIST_SIZE;
+
   return (
     <div className="surface-card overflow-hidden p-6 sm:p-7">
       <div className="flex flex-col gap-2 border-b border-border/70 pb-4">
         <p className="section-kicker">Leaderboard</p>
-        <h3 className="font-display text-xl font-semibold text-foreground">{title}</h3>
+        <h3 className="font-display text-xl font-semibold text-foreground">
+          {title}
+        </h3>
         <p className="text-sm leading-6 text-muted-foreground">{description}</p>
       </div>
 
       {items.length === 0 ? (
         <EmptyChart message="No ranking data available." />
       ) : (
-        <div className="mt-2 divide-y divide-border/70">
-          {items.map((item, index) => (
-            <div
-              key={item.id}
-              className="grid gap-3 py-4 sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:items-start"
-            >
-              <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/80 bg-[var(--surface-soft)] text-xs font-semibold text-foreground">
-                {index + 1}
-              </span>
-              <div className="min-w-0">
+        <>
+          <div className="mt-2 divide-y divide-border/70">
+            {visibleItems.map((item, index) => (
+              <div
+                key={item.id}
+                className="grid gap-3 py-4 sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:items-start"
+              >
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/80 bg-[var(--surface-soft)] text-xs font-semibold text-foreground">
+                  {index + 1}
+                </span>
                 <div className="min-w-0">
-                  <p className="truncate text-sm font-semibold text-foreground sm:text-base">
-                    {item.name}
-                  </p>
-                  <p className="text-[0.72rem] uppercase tracking-[0.16em] text-muted-foreground">
-                    {item.constituency}
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold text-foreground sm:text-base">
+                      {item.name}
+                    </p>
+                    <p className="text-[0.72rem] uppercase tracking-[0.16em] text-muted-foreground">
+                      {item.constituency}
+                    </p>
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                    {item.detail}
                   </p>
                 </div>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.detail}</p>
-              </div>
 
-              <div className="shrink-0 text-left sm:text-right">
-                <p className="numeric text-lg font-semibold text-foreground">{item.value}</p>
+                <div className="shrink-0 text-left sm:text-right">
+                  <p className="numeric text-lg font-semibold text-foreground">
+                    {item.value}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+          {hasMore && (
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="mt-4 flex w-full items-center justify-center gap-2 rounded-full border border-border/80 bg-[var(--surface-soft)] px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted/70"
+            >
+              {expanded ? "Show Top 5" : `See All (${items.length})`}
+            </button>
+          )}
+        </>
       )}
     </div>
   );
@@ -308,8 +343,10 @@ export default function AnalyticsPage() {
     () =>
       candidates
         .map(toPerformanceCandidate)
-        .filter((candidate): candidate is PerformanceCandidate => candidate !== null),
-    [candidates]
+        .filter(
+          (candidate): candidate is PerformanceCandidate => candidate !== null,
+        ),
+    [candidates],
   );
 
   const educationData = useMemo(() => {
@@ -370,7 +407,7 @@ export default function AnalyticsPage() {
       count: performanceCandidates.filter(
         (candidate) =>
           candidate.voteSharePercent >= band.min &&
-          candidate.voteSharePercent < band.max
+          candidate.voteSharePercent < band.max,
       ).length,
     }));
   }, [performanceCandidates]);
@@ -389,7 +426,7 @@ export default function AnalyticsPage() {
       count: performanceCandidates.filter(
         (candidate) =>
           candidate.winMarginPercent >= band.min &&
-          candidate.winMarginPercent < band.max
+          candidate.winMarginPercent < band.max,
       ).length,
     }));
   }, [performanceCandidates]);
@@ -398,25 +435,25 @@ export default function AnalyticsPage() {
     if (performanceCandidates.length === 0) return [];
 
     const topVotes = [...performanceCandidates].sort(
-      (a, b) => b.votesReceived - a.votesReceived
+      (a, b) => b.votesReceived - a.votesReceived,
     )[0]!;
     const highestVoteShare = [...performanceCandidates].sort(
-      (a, b) => b.voteSharePercent - a.voteSharePercent
+      (a, b) => b.voteSharePercent - a.voteSharePercent,
     )[0]!;
     const biggestMarginVotes = [...performanceCandidates].sort(
-      (a, b) => b.winMargin - a.winMargin
+      (a, b) => b.winMargin - a.winMargin,
     )[0]!;
     const biggestMarginPercent = [...performanceCandidates].sort(
-      (a, b) => b.winMarginPercent - a.winMarginPercent
+      (a, b) => b.winMarginPercent - a.winMarginPercent,
     )[0]!;
-    const strongestRatio = [...performanceCandidates]
-      .filter((candidate) => candidate.winnerRunnerUpRatio != null)
-      .sort(
-        (a, b) =>
-          (b.winnerRunnerUpRatio ?? 0) - (a.winnerRunnerUpRatio ?? 0)
-      )[0] ?? topVotes;
+    const strongestRatio =
+      [...performanceCandidates]
+        .filter((candidate) => candidate.winnerRunnerUpRatio != null)
+        .sort(
+          (a, b) => (b.winnerRunnerUpRatio ?? 0) - (a.winnerRunnerUpRatio ?? 0),
+        )[0] ?? topVotes;
     const largestValidVotePool = [...performanceCandidates].sort(
-      (a, b) => b.totalValidVotes - a.totalValidVotes
+      (a, b) => b.totalValidVotes - a.totalValidVotes,
     )[0]!;
 
     return [
@@ -426,7 +463,7 @@ export default function AnalyticsPage() {
         constituency: topVotes.constituency,
         value: formatNumber(topVotes.votesReceived),
         detail: `${formatPercent(topVotes.voteSharePercent)} winning share from ${formatNumber(
-          topVotes.totalValidVotes
+          topVotes.totalValidVotes,
         )} valid votes.`,
       },
       {
@@ -435,7 +472,7 @@ export default function AnalyticsPage() {
         constituency: highestVoteShare.constituency,
         value: formatPercent(highestVoteShare.voteSharePercent, 2),
         detail: `Beat ${highestVoteShare.runnerUpName} by ${formatNumber(
-          highestVoteShare.winMargin
+          highestVoteShare.winMargin,
         )} votes.`,
       },
       {
@@ -458,7 +495,7 @@ export default function AnalyticsPage() {
         constituency: strongestRatio.constituency,
         value: formatRatio(strongestRatio.winnerRunnerUpRatio ?? 0),
         detail: `Winner vote pile was ${formatRatio(
-          strongestRatio.winnerRunnerUpRatio ?? 0
+          strongestRatio.winnerRunnerUpRatio ?? 0,
         )} the runner-up total.`,
       },
       {
@@ -475,21 +512,21 @@ export default function AnalyticsPage() {
     if (performanceCandidates.length === 0) return [];
 
     const avgWinningShare = average(
-      performanceCandidates.map((candidate) => candidate.voteSharePercent)
+      performanceCandidates.map((candidate) => candidate.voteSharePercent),
     );
     const avgMarginPercent = average(
-      performanceCandidates.map((candidate) => candidate.winMarginPercent)
+      performanceCandidates.map((candidate) => candidate.winMarginPercent),
     );
     const dominantWins = performanceCandidates.filter(
-      (candidate) => candidate.voteSharePercent >= DOMINANT_SHARE_THRESHOLD
+      (candidate) => candidate.voteSharePercent >= DOMINANT_SHARE_THRESHOLD,
     ).length;
     const ratioWins = performanceCandidates.filter(
       (candidate) =>
         candidate.winnerRunnerUpRatio != null &&
-        candidate.winnerRunnerUpRatio >= DOMINANT_RATIO_THRESHOLD
+        candidate.winnerRunnerUpRatio >= DOMINANT_RATIO_THRESHOLD,
     ).length;
     const closeRaces = performanceCandidates.filter(
-      (candidate) => candidate.winMarginPercent < CLOSE_MARGIN_THRESHOLD
+      (candidate) => candidate.winMarginPercent < CLOSE_MARGIN_THRESHOLD,
     ).length;
 
     return [
@@ -525,7 +562,6 @@ export default function AnalyticsPage() {
     () =>
       [...performanceCandidates]
         .sort((a, b) => b.votesReceived - a.votesReceived)
-        .slice(0, TOP_LIST_SIZE)
         .map((candidate) => ({
           id: candidate.id,
           name: candidate.name,
@@ -535,31 +571,29 @@ export default function AnalyticsPage() {
             candidate.runnerUpName
           } on ${formatNumber(candidate.runnerUpVotes)} votes.`,
         })),
-    [performanceCandidates]
+    [performanceCandidates],
   );
 
   const highestVoteShares = useMemo<LeaderboardItem[]>(
     () =>
       [...performanceCandidates]
         .sort((a, b) => b.voteSharePercent - a.voteSharePercent)
-        .slice(0, TOP_LIST_SIZE)
         .map((candidate) => ({
           id: candidate.id,
           name: candidate.name,
           constituency: candidate.constituency,
           value: formatPercent(candidate.voteSharePercent, 2),
           detail: `${formatNumber(candidate.votesReceived)} winner votes from ${formatNumber(
-            candidate.totalValidVotes
+            candidate.totalValidVotes,
           )} valid votes.`,
         })),
-    [performanceCandidates]
+    [performanceCandidates],
   );
 
   const biggestMargins = useMemo<LeaderboardItem[]>(
     () =>
       [...performanceCandidates]
         .sort((a, b) => b.winMargin - a.winMargin)
-        .slice(0, TOP_LIST_SIZE)
         .map((candidate) => ({
           id: candidate.id,
           name: candidate.name,
@@ -569,7 +603,7 @@ export default function AnalyticsPage() {
             candidate.runnerUpName
           }.`,
         })),
-    [performanceCandidates]
+    [performanceCandidates],
   );
 
   const strongestRatios = useMemo<LeaderboardItem[]>(
@@ -577,27 +611,24 @@ export default function AnalyticsPage() {
       [...performanceCandidates]
         .filter((candidate) => candidate.winnerRunnerUpRatio != null)
         .sort(
-          (a, b) =>
-            (b.winnerRunnerUpRatio ?? 0) - (a.winnerRunnerUpRatio ?? 0)
+          (a, b) => (b.winnerRunnerUpRatio ?? 0) - (a.winnerRunnerUpRatio ?? 0),
         )
-        .slice(0, TOP_LIST_SIZE)
         .map((candidate) => ({
           id: candidate.id,
           name: candidate.name,
           constituency: candidate.constituency,
           value: formatRatio(candidate.winnerRunnerUpRatio ?? 0),
           detail: `${formatPercent(candidate.voteSharePercent)} vs ${formatPercent(
-            candidate.runnerUpSharePercent
+            candidate.runnerUpSharePercent,
           )} for ${candidate.runnerUpName}.`,
         })),
-    [performanceCandidates]
+    [performanceCandidates],
   );
 
   const closestByMarginPercent = useMemo<LeaderboardItem[]>(
     () =>
       [...performanceCandidates]
         .sort((a, b) => a.winMarginPercent - b.winMarginPercent)
-        .slice(0, TOP_LIST_SIZE)
         .map((candidate) => ({
           id: candidate.id,
           name: candidate.name,
@@ -607,7 +638,7 @@ export default function AnalyticsPage() {
             candidate.name
           } from ${candidate.runnerUpName}.`,
         })),
-    [performanceCandidates]
+    [performanceCandidates],
   );
 
   const largestValidVotePools = useMemo<LeaderboardItem[]>(
@@ -621,10 +652,10 @@ export default function AnalyticsPage() {
           constituency: candidate.constituency,
           value: formatNumber(candidate.totalValidVotes),
           detail: `${formatNumber(candidate.votesReceived)} winner votes and ${formatPercent(
-            candidate.voteSharePercent
+            candidate.voteSharePercent,
           )} share.`,
         })),
-    [performanceCandidates]
+    [performanceCandidates],
   );
 
   const provinceSummary = useMemo<ProvinceSummary[]>(() => {
@@ -708,9 +739,10 @@ export default function AnalyticsPage() {
                     "color-mix(in srgb, var(--surface-inverse-foreground) 76%, transparent)",
                 }}
               >
-                This dashboard prioritizes vote intensity, winner-versus-opponent
-                separation, margin structure, and province patterns before demographic
-                context, closer to an election desk than a generic charts page.
+                This dashboard prioritizes vote intensity,
+                winner-versus-opponent separation, margin structure, and
+                province patterns before demographic context, closer to an
+                election desk than a generic charts page.
               </p>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -755,9 +787,9 @@ export default function AnalyticsPage() {
                 What this page now surfaces
               </h2>
               <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                The emphasis is on standout winners, biggest margins, strongest ratios
-                over the nearest opponent, and seat-by-seat competitiveness before the
-                broader demographic breakdown.
+                The emphasis is on standout winners, biggest margins, strongest
+                ratios over the nearest opponent, and seat-by-seat
+                competitiveness before the broader demographic breakdown.
               </p>
 
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -975,7 +1007,10 @@ export default function AnalyticsPage() {
             />
             <div className="grid gap-6 xl:grid-cols-3">
               <ChartCard title="Education Distribution (Highest Level)">
-                <ChartSlot ready={chartsReady} hasData={educationData.length > 0}>
+                <ChartSlot
+                  ready={chartsReady}
+                  hasData={educationData.length > 0}
+                >
                   <div className="h-[280px] w-full">
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart data={educationData} margin={{ left: -10 }}>
@@ -1070,7 +1105,10 @@ export default function AnalyticsPage() {
                           ))}
                         </Pie>
                         <Tooltip
-                          formatter={(value, name) => [value as number, name as string]}
+                          formatter={(value, name) => [
+                            value as number,
+                            name as string,
+                          ]}
                           contentStyle={{ borderRadius: 12, fontSize: 12 }}
                         />
                         <Legend iconType="circle" iconSize={10} />
