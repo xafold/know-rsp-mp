@@ -309,7 +309,7 @@
     ],
     "totalValidVotes": 96644,
     "voteSharePercent": 61.34,
-    "winMarginPercent": 40.0
+    "winMarginPercent": 40
   },
   {
     "id": "lekh-jung-thapa",
@@ -928,7 +928,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/badan-kumar-bhandari.jpg",
     "age": 33,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Entrepreneur, Media Worker, Politician",
     "biography": "Badan Kumar Bhandari is an RSP politician who won Kavrepalanchok-2 with 53,344 votes, defeating Madhu Prasad Acharya of Nepali Congress by over 35,000 votes.",
     "education": [
       {
@@ -989,6 +989,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-kavrepalanchowk/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.khabarhub.com/2026/07/538239/",
+        "label": "khabarhub.com – 538239"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://risingnepaldaily.com/news/76867",
+        "label": "risingnepaldaily.com – 76867"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -1370,7 +1380,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/narendra-sah-kalwar-rsp.jpg",
     "age": 53,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Contractor, Politician",
     "biography": "Narendra Sah Kalwar is an RSP politician who won Sarlahi-3 with 46,890 votes, defeating Narayan Kaji Shrestha of NCP by over 33,000 votes.",
     "education": [
       {
@@ -1422,6 +1432,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-2/district-sarlahi/constituency-3?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.khabarhub.com/2026/04/537518/",
+        "label": "khabarhub.com – 537518"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.nepalnews.com/s/politics/rsp-candidate-kalwar-from-sarlahi-3-also-on-blacklist/",
+        "label": "nepalnews.com – rsp candidate kalwar from sarlahi 3 also on blackl"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -1604,7 +1624,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/bikram-khanal-2082-1.jpg",
     "age": 55,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Businessman, Politician",
     "biography": "Bikram Khanal is an RSP politician who won Nawalparasi-1 with 45,241 votes, defeating Binod Kumar Chaudhary of Nepali Congress by over 35,000 votes.",
     "education": [
       {
@@ -1665,6 +1685,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-5/district-nawalparasiwest/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://kathmandupost.com/province-no-5/2026/03/08/rsp-s-bikram-khanal-stuns-binod-chaudhary-in-nawalparasi-west-1",
+        "label": "kathmandupost.com – rsp s bikram khanal stuns binod chaudhary in nawal"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://myrepublica.nagariknetwork.com/news/over-20-businessmen-make-it-to-parliament-this-election",
+        "label": "myrepublica.nagariknetwork.com – over 20 businessmen make it to parliament this ele"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -1681,7 +1711,7 @@
       }
     ],
     "totalValidVotes": 76676,
-    "voteSharePercent": 59.0,
+    "voteSharePercent": 59,
     "winMarginPercent": 46.61
   },
   {
@@ -2494,7 +2524,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Rajib-Khatry.jpg",
     "age": 39,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Journalist, Politician",
     "biography": "Rajib Khatry is an RSP politician who won Bhaktapur-2 with 42,333 votes, defeating Mahesh Basnet of CPN-UML by over 31,000 votes.",
     "education": [
       {
@@ -2554,6 +2584,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-bhaktapur/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/rajib-khatry-aab23ba6/",
+        "label": "linkedin.com – rajib khatry aab23ba6"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.makalukhabar.com/rsp-nominates-khatri-for-bhaktapur-2-bista-for-kathmandu-10/",
+        "label": "makalukhabar.com – rsp nominates khatri for bhaktapur 2 bista for kat"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -2746,7 +2786,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/bablu.jpg",
     "age": 28,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Social Activist, Politician",
     "biography": "Bablu Gupta is a Rastriya Swatantra Party politician elected from Siraha-1 in the 2026 Nepal general election with 41,322 votes, defeating Ram Sundar Chaudhary of Nepali Congress.",
     "education": [
       {
@@ -2799,6 +2839,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-2/district-siraha/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bablu_Gupta",
+        "label": "wikipedia.org – Bablu Gupta"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.khabarhub.com/2025/26/502978/",
+        "label": "khabarhub.com – 502978"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -3056,7 +3106,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Arbind-sah.jpg",
     "age": 41,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Civil Engineer, Politician",
     "biography": "Arbinda Sah is an RSP politician who won Bara-3 with a margin of 30,645 votes over Farmullah Mansoor of Nepali Congress.",
     "education": [
       {
@@ -3104,6 +3154,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-2/district-bara/constituency-3?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://www.zoominfo.com/p/Arbinda-Sah/8838080488",
+        "label": "zoominfo.com – 8838080488"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://myrepublica.nagariknetwork.com/news/rsp-candidates-win-in-bara-3-and-bara-4-36-20.html",
+        "label": "myrepublica.nagariknetwork.com – rsp candidates win in bara 3 and bara 4 36 20"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -4184,7 +4244,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/tapeshwar.jpg",
     "age": 33,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Lecturer, Politician",
     "biography": "Tapeshwar Yadav is an RSP politician who won Siraha-4 with 36,210 votes against Ajay Shankar Nayak of NCP.",
     "education": [
       {
@@ -4239,6 +4299,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-2/district-siraha/constituency-4?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://www.researchgate.net/profile/Tapeshwar-Yadav",
+        "label": "researchgate.net – Tapeshwar Yadav"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/tapeshwar-yadav-44784b36/",
+        "label": "linkedin.com – tapeshwar yadav 44784b36"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -4329,7 +4399,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/amnish-kumar-yadav-uml.jpg",
     "age": 55,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Academic, Politician",
     "biography": "Amresh Kumar Singh is an RSP politician who won Sarlahi-4 with 35,688 votes, defeating prominent Nepali Congress leader Gagan Kumar Thapa in a notable upset.",
     "education": [
       {
@@ -4377,6 +4447,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-2/district-sarlahi/constituency-4?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://farsightnepal.com/news/candidate-watch-dr-amresh-singh-from-sarlahi-4/",
+        "label": "farsightnepal.com – candidate watch dr amresh singh from sarlahi 4"
+      },
+      {
+        "platform": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Amresh_Kumar_Singh",
+        "label": "wikipedia.org – Amresh Kumar Singh"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -4448,7 +4528,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/DP-aryal.jpg",
     "age": 51,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Businessman, Politician",
     "biography": "Dol Prasad Aryal is the Vice-President of the Rastriya Swatantra Party and won Kathmandu-9 with 35,093 votes, defeating Nanumaiya Bastola of Nepali Congress by nearly 30,000 votes. He is a key party strategist who predicted RSP's two-thirds majority early in the count.",
     "education": [
       {
@@ -4509,6 +4589,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-kathmandu/constituency-9?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dol_Prasad_Aryal",
+        "label": "wikipedia.org – Dol Prasad Aryal"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://www.nepallivetoday.com/2023/01/17/rsp-minister-criticized-for-conflict-of-interest/",
+        "label": "nepallivetoday.com – rsp minister criticized for conflict of interest"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -4612,7 +4702,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/pramod-mahato-rsp.jpg",
     "age": 40,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Businessman, Politician",
     "biography": "Pramod Kumar Mahato is an RSP politician who won Mahottari-1 with 34,636 votes against Giriraj Mani Pokharel of NCP.",
     "education": [
       {
@@ -4665,6 +4755,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-2/district-mahottari/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://ekantipur.com/politics/2026/01/28/en/new-challenges-the-old-in-mahottari-constituency-no-1-47-14.html",
+        "label": "ekantipur.com – new challenges the old in mahottari constituency n"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -4686,7 +4781,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/sunil-kc-rsp.jpg",
     "age": 43,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Journalist, Businessman, Politician",
     "biography": "Sunil KC is an RSP politician who won Kathmandu-2 with 34,238 votes, defeating Kabir Sharma of Nepali Congress, as part of RSP's sweep of all Kathmandu Valley constituencies.",
     "education": [
       {
@@ -4734,6 +4829,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-kathmandu/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://www.aidiaasia.org/leadership/1/bio",
+        "label": "aidiaasia.org – bio"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://kathmandupost.com/money/2024/09/26/sunil-kc-elected-nicci-president",
+        "label": "kathmandupost.com – sunil kc elected nicci president"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -4805,7 +4910,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Dipak-Bohara_Rsp.jpg",
     "age": 38,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Journalist, Politician",
     "biography": "Deepak Raj Bohara is an RSP politician who won Kanchanpur-2 with 33,952 votes, defeating former NC minister Narayan Prakash Saud.",
     "education": [
       {
@@ -4853,6 +4958,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-7/district-kanchanpur/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.nepalnews.com/s/politics/rsp-candidate-bohara-wins-from-kanchanpur-2/",
+        "label": "nepalnews.com – rsp candidate bohara wins from kanchanpur 2"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.khabarhub.com/2026/10/538547/",
+        "label": "khabarhub.com – 538547"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -4867,7 +4982,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/dharma-kc.jpg",
     "age": 45,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Engineer, Politician",
     "biography": "Dharma Raj KC is a Rastriya Swatantra Party politician elected from Lamjung-1 in the 2026 Nepal general election with 33,898 votes, defeating Prithvi Subba Gurung of CPN-UML.",
     "education": [
       {
@@ -4916,6 +5031,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-4/district-lamjung/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://myrepublica.nagariknetwork.com/news/rsps-dharmaraj-kc-wins-over-vice-president-of-cpn-ump-prithvi-subba-gurung--40-19.html",
+        "label": "myrepublica.nagariknetwork.com – rsps dharmaraj kc wins over vice president of cpn "
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -5223,7 +5343,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/shri-ram-neupane-RSP-Tanahun2.jpg",
     "age": 56,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Engineer, Politician",
     "biography": "Shriram Neupane is a Rastriya Swatantra Party politician elected from Tanahun-2 in the 2026 Nepal general election with 32,687 votes, defeating Shankar Bhandari of Nepali Congress.",
     "education": [
       {
@@ -5267,6 +5387,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-4/district-tanahun/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://www.spotlightnepal.com/2026/01/23/house-of-representatives-election2082-five-candidates-from-the-energy-sector-in-the-electoral-race/",
+        "label": "spotlightnepal.com – house of representatives election2082 five candida"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -5353,7 +5478,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Jagadish-kharel.jpg",
     "age": 36,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Journalist, Politician",
     "biography": "Jagadish Kharel is a Rastriya Swatantra Party politician elected from Dolakha-1 in the 2026 Nepal general election with 32,376 votes, defeating Parwat Gurung of CPN-UML.",
     "education": [
       {
@@ -5396,6 +5521,21 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-dolkha/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://jagdishkharel.com.np/",
+        "label": "jagdishkharel.com.np"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://kathmandupost.com/politics/2025/09/22/jagdish-kharel-from-grilling-politicians-to-taking-charge-of-ministry",
+        "label": "kathmandupost.com – jagdish kharel from grilling politicians to taking"
+      },
+      {
+        "platform": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Jagdish_Kharel",
+        "label": "wikipedia.org – Jagdish Kharel"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -5479,7 +5619,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/nuwakot-2-RSP-Achyutam-Lamichhane.jpg",
     "age": 48,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Public Health Professional, Politician",
     "biography": "Achyutam Lamichhane is a Rastriya Swatantra Party politician elected from Nuwakot-2 in the 2026 Nepal general election with 32,054 votes, defeating Jagadiswor Narsingh KC of Nepali Congress.",
     "education": [
       {
@@ -5522,6 +5662,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-nuwakot/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://percnepal.org/member/achyut-lamichhane/",
+        "label": "percnepal.org – achyut lamichhane"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -5609,7 +5754,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Uttam-Prasad-Poudel-RSP-Kaski2.jpg",
     "age": 43,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Journalist, Politician",
     "biography": "Uttam Prasad Paudel is a Rastriya Swatantra Party politician elected from Kaski-2 in the 2026 Nepal general election with 31,911 votes, defeating Madhav Prasad Bastola of Nepali Congress.",
     "education": [
       {
@@ -5653,6 +5798,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-4/district-kaski/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://election.ekantipur.com/profile/2314?lng=eng",
+        "label": "election.ekantipur.com – 2314"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -5805,7 +5955,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/parashmani-gelal1.jpg",
     "age": 40,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Businessman, Politician",
     "biography": "Parash Mani Gelal is a Rastriya Swatantra Party politician elected from Udayapur-1 in the 2026 Nepal general election with 30,590 votes, defeating Rajesh Kumar Rai of श्रम संस्कृति पार्टी.",
     "education": [
       {
@@ -5860,6 +6010,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-1/district-udayapur/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/parash-mani-gelal-38016516b/",
+        "label": "linkedin.com – parash mani gelal 38016516b"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -5886,7 +6041,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/asha-jha-rsp.jpg",
     "age": 42,
     "gender": "Female",
-    "profession": "Politician",
+    "profession": "Public Health Worker, Politician",
     "biography": "Asha Jha is a Rastriya Swatantra Party politician elected from Morang-5 in the 2026 Nepal general election with 30,434 votes, defeating Phul Kumar Lalwani of Nepali Congress.",
     "education": [
       {
@@ -5940,6 +6095,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-1/district-morang/constituency-5?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://kathmandupost.com/national/2026/03/08/13-of-16-rsp-women-candidates-record-historic-electoral-success",
+        "label": "kathmandupost.com – 13 of 16 rsp women candidates record historic elec"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -6100,7 +6260,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Prashant-upreti_IMG_1768826480046.jpg",
     "age": 25,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Teacher, Businessman, Politician",
     "biography": "Prashant Upreti is a Rastriya Swatantra Party politician elected from Makwanpur-2 in the 2026 Nepal general election with 30,050 votes, defeating Mahesh Kumar Bartaula of CPN-UML.",
     "education": [
       {
@@ -6154,6 +6314,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-makwanpur/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://myrepublica.nagariknetwork.com/news/25-year-old-prashant-upreti-of-rsp-claims-victory-in-makwanpur-2-71-38.html",
+        "label": "myrepublica.nagariknetwork.com – 25 year old prashant upreti of rsp claims victory "
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.ratopati.com/story/52680/25-year-old-upreti-on-parliamentary-tour",
+        "label": "ratopati.com – 25 year old upreti on parliamentary tour"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -6190,7 +6360,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Sudhan-Gurung-RSP.jpg",
     "age": 38,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "DJ, Event Manager, Civil Society Activist, Politician",
     "biography": "Sudhan Gurung is a Rastriya Swatantra Party politician elected from Gorkha-1 in the 2026 Nepal general election with 29,896 votes, defeating Prem Kumar Khatri of Nepali Congress.",
     "education": [
       {
@@ -6235,6 +6405,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-4/district-gorkha/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sudan_Gurung",
+        "label": "wikipedia.org – Sudan Gurung"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.ratopati.com/story/52950/dj-sudan-who-changed-the-track-in-the-club-has-reached-the-parliament-to-change-the-track-of-politics",
+        "label": "ratopati.com – dj sudan who changed the track in the club has rea"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -7115,7 +7295,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/ganesh-parajuli.jpg",
     "age": 46,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Businessman, Politician",
     "biography": "Ganesh Parajuli is an RSP politician who won Kathmandu-7 with 27,805 votes against Pramod Hari Guragain of Nepali Congress.",
     "education": [
       {
@@ -7173,6 +7353,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-kathmandu/constituency-7?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ganesh_Parajuli",
+        "label": "wikipedia.org – Ganesh Parajuli"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://ganeshparajuli.com/about-me/",
+        "label": "ganeshparajuli.com – about me"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -7290,7 +7480,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Bikram-Thapa_RSP.jpg",
     "age": 63,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Police Officer, Politician",
     "biography": "Bikram Thapa2 is a Rastriya Swatantra Party politician elected from Kapilvastu-2 in the 2026 Nepal general election with 27,635 votes, defeating Surendra Raj Acharya of Nepali Congress.",
     "education": [
       {
@@ -7334,6 +7524,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-5/district-kapilvastu/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://ekantipur.com/politics/2026/03/02/en/kapilvastu-2-former-ssp-challenges-former-ministers-24-09.html",
+        "label": "ekantipur.com – kapilvastu 2 former ssp challenges former minister"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -7435,7 +7630,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Yagyamani-neupane-rsp.jpg",
     "age": 41,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Advocate, Politician",
     "biography": "Yagyamani Neupane is a Rastriya Swatantra Party politician elected from Morang-1 in the 2026 Nepal general election with 27,367 votes, defeating Shanti Pakhrin Lama of श्रम संस्कृति पार्टी.",
     "education": [
       {
@@ -7484,6 +7679,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-1/district-morang/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://knowyourcandidate.nepabrita.com/candidates/yagyamani-neupane/",
+        "label": "knowyourcandidate.nepabrita.com – yagyamani neupane"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -7797,7 +7997,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Kabindra-Gorkha-2RSP.jpg",
     "age": 46,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Civil Society Worker, Human Rights Activist, Politician",
     "biography": "Kabindra Burlakoti is a Rastriya Swatantra Party politician elected from Gorkha-2 in the 2026 Nepal general election with 26,660 votes, defeating Prakash Chandra Dawadi of Nepali Congress.",
     "education": [
       {
@@ -7846,6 +8046,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-4/district-gorkha/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://dtp.org.au/community/kabindra-burlakoti/",
+        "label": "dtp.org.au – kabindra burlakoti"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -7924,7 +8129,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Bodhnarayan-Shrestha.jpg",
     "age": 56,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Development Worker, Politician",
     "biography": "Bodh Narayan Shrestha is a Rastriya Swatantra Party politician elected from Dhading-2 in the 2026 Nepal general election with 26,145 votes, defeating Ramesh Prasad Dhamala of Nepali Congress.",
     "education": [
       {
@@ -7972,6 +8177,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-dhading/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://election.ekantipur.com/profile/1280?lng=eng",
+        "label": "election.ekantipur.com – 1280"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://np.linkedin.com/in/bodh-narayan-shrestha-481725b2",
+        "label": "linkedin.com – bodh narayan shrestha 481725b2"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -8050,7 +8265,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/krishnahari-budhathoki.jpg",
     "age": 44,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Economist, Researcher, Politician",
     "biography": "Krishna Hari Budhathoki is a Rastriya Swatantra Party politician elected from Ramechhap-1 in the 2026 Nepal general election with 24,808 votes, defeating Madhav Prasad Dhungel of CPN-UML.",
     "education": [
       {
@@ -8094,6 +8309,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-ramechhap/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://insurancekhabar.com/en/budhathoki-holds-a-masters-degree-in-six-subjects-with-a-phd-in-economics-2/",
+        "label": "insurancekhabar.com – budhathoki holds a masters degree in six subjects "
+      },
+      {
+        "platform": "News Article",
+        "url": "https://scholar.google.com/citations?user=F36S9CUAAAAJ&hl=en",
+        "label": "scholar.google.com – citations"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -8108,7 +8333,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/1-Biraj-bhakta-shrestha-4-1024x683-1.jpg",
     "age": 44,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Entrepreneur, Social Activist, Politician",
     "biography": "Biraj Bhakta Shrestha is an RSP politician who won Kathmandu-8 with 24,592 votes, defeating Suman Sayami of NCP by over 21,000 votes.",
     "education": [
       {
@@ -8171,6 +8396,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-kathmandu/constituency-8?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Biraj_Bhakta_Shrestha",
+        "label": "wikipedia.org – Biraj Bhakta Shrestha"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://safalpaila.com/biraj-bhakta-shrestha-biography/",
+        "label": "safalpaila.com – biraj bhakta shrestha biography"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -8202,7 +8437,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Bharat-Parajuli.jpg",
     "age": 57,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Engineer, Businessman, Politician",
     "biography": "Bharat Prasad Parajuli is a Rastriya Swatantra Party politician elected from Sindhupalchok-1 in the 2026 Nepal general election with 24,412 votes, defeating Madhav Sapakota of Nepali Communist Party.",
     "education": [
       {
@@ -8252,6 +8487,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-sindhupalchowk/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.ratopati.com/story/52667/bharat-parajuli-from-drinking-water-engineer-to-mp",
+        "label": "ratopati.com – bharat parajuli from drinking water engineer to mp"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://www.ippan.org.np/870",
+        "label": "ippan.org.np – 870"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -8266,7 +8511,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Janak-Singh-Dhami_Rsp.jpg",
     "age": 55,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Teacher, Politician",
     "biography": "Janak Singh Dhami is an RSP politician who won Kanchanpur-1 with 24,332 votes by a margin of 13,222 over an NCP candidate.",
     "education": [
       {
@@ -8333,6 +8578,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-7/district-kanchanpur/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.ratopati.com/story/52615/banana-farmer-father-now-federal-mp",
+        "label": "ratopati.com – banana farmer father now federal mp"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -8908,7 +9158,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/raju.jpg",
     "age": 55,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Police Officer, Politician",
     "biography": "Rajunath Pandey is an RSP politician who won Kathmandu-3 with 18,757 votes, defeating Kulman Ghising.",
     "education": [
       {
@@ -8961,6 +9211,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-3/district-kathmandu/constituency-3?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.nepalnews.com/s/capital/rajunath-pandey-took-charge-as-head-of-kmc-police-force/",
+        "label": "nepalnews.com – rajunath pandey took charge as head of kmc police "
+      },
+      {
+        "platform": "News Article",
+        "url": "https://en.himalpress.com/kathmandus-former-city-police-chief-pandey-elected-from-kathmandu-3/",
+        "label": "himalpress.com – kathmandus former city police chief pandey elected"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -9135,7 +9395,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/govinda-panthi.jpg",
     "age": 51,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Police Officer, Lawyer, Politician",
     "biography": "Govinda Panthi is a Rastriya Swatantra Party politician elected from Gulmi-2 in the 2026 Nepal general election with 16,967 votes, defeating Gokarna Raj Bista of CPN-UML.",
     "education": [
       {
@@ -9182,6 +9442,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-5/district-gulmi/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://kathmandupost.com/national/2026/03/07/rsp-candidate-govinda-panthi-wins-gulmi-2",
+        "label": "kathmandupost.com – rsp candidate govinda panthi wins gulmi 2"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -9424,7 +9689,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/bishwa-raj-pokharel-rsp.jpg",
     "age": 59,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Police Officer, Politician",
     "biography": "Bishwa Raj Pokharel is a Rastriya Swatantra Party politician elected from Okhaldhunga-1 in the 2026 Nepal general election with 13,953 votes, defeating Kumar Luitel of Nepali Congress.",
     "education": [
       {
@@ -9468,6 +9733,16 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-1/district-okhaldhunga/constituency-1?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://myrepublica.nagariknetwork.com/news/former-aig-pokharel-once-backed-by-uml-for-igp-joins-rsp-17-28.html",
+        "label": "myrepublica.nagariknetwork.com – former aig pokharel once backed by uml for igp joi"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://english.pardafas.com/former-aig-pokharel-joins-rsp/",
+        "label": "pardafas.com – former aig pokharel joins rsp"
       }
     ],
     "lastUpdated": "2026-03-10",
@@ -9482,7 +9757,7 @@
     "photo": "https://election.onlinekhabar.com/wp-content/uploads/2026/02/Som-Sharma-RSP-Baglung-2.jpg",
     "age": 34,
     "gender": "Male",
-    "profession": "Politician",
+    "profession": "Journalist, Social Activist, Politician",
     "biography": "Som Sharma is a Rastriya Swatantra Party politician elected from Baglung-2 in the 2026 Nepal general election with 12,647 votes, defeating Tek Raj Paudel of Nepali Congress.",
     "education": [
       {
@@ -9525,6 +9800,11 @@
         "platform": "News Article",
         "url": "https://election.ekantipur.com/pradesh-4/district-baglung/constituency-2?lng=eng",
         "label": "Ekantipur – Constituency Result"
+      },
+      {
+        "platform": "News Article",
+        "url": "https://kathmandupost.com/national/2026/03/07/rsp-s-som-sharma-wins-baglung-2",
+        "label": "kathmandupost.com – rsp s som sharma wins baglung 2"
       }
     ],
     "lastUpdated": "2026-03-10",
