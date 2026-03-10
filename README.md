@@ -59,7 +59,7 @@ know_rsp_candidate/
 │   └── utils.ts                      # Helper functions
 ├── public/
 │   ├── candidates/                   # MP photos (or placeholder silhouettes)
-│   └── og-image.png                  # Default OG image for social sharing
+│   └── rsp-share-preview.jpg         # Default OG image for social sharing
 ├── vercel.json
 └── tailwind.config.ts
 ```

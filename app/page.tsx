@@ -1,65 +1,273 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import Link from "next/link";
+import {
+  ArrowRight,
+  BadgeCheck,
+  ChartColumnBig,
+  Database,
+  ListChecks,
+  Users,
+  Vote,
+} from "lucide-react";
+import { getCandidates } from "@/lib/getCandidates";
+import CandidateGrid from "@/components/CandidateGrid";
 
-export default function Home() {
+const HOME_SHARE_IMAGE = "/rsp-share-preview.jpg";
+
+export const metadata: Metadata = {
+  title: "Know RSP | Nepal Civic Transparency",
+  description:
+    "Explore all RSP Members of Parliament elected in the 2026 Nepal General Election. A citizen-led civic transparency initiative.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Know Your RSP Representative",
+    description:
+      "Explore all RSP Members of Parliament elected in the 2026 Nepal General Election.",
+    url: "/",
+    images: [
+      {
+        url: HOME_SHARE_IMAGE,
+        width: 1024,
+        height: 576,
+        alt: "Know RSP share preview using the official RSP visual",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Know Your RSP Representative",
+    description:
+      "Explore all RSP Members of Parliament elected in the 2026 Nepal General Election.",
+    images: [HOME_SHARE_IMAGE],
+  },
+};
+
+export default function HomePage() {
+  const candidates = getCandidates();
+
+  const totalMPs = candidates.length;
+  const fptpCount = candidates.filter((c) => c.electionType === "FPTP").length;
+  const prCount = candidates.filter((c) => c.electionType === "PR").length;
+  const withEducation = candidates.filter((c) => c.education?.length).length;
+  const withSocials = candidates.filter((c) => c.socials?.length).length;
+  const withVoteData = candidates.filter((c) => c.voteSharePercent != null).length;
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div>
+      <section className="page-shell-wide page-section">
+        <div className="grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]">
+          <div className="surface-contrast overflow-hidden p-8 sm:p-10 lg:p-12">
+            <p
+              className="section-kicker"
+              style={{
+                color:
+                  "color-mix(in srgb, var(--surface-inverse-foreground) 68%, transparent)",
+              }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              2026 Nepal General Election
+            </p>
+            <h1 className="display-title mt-4 max-w-4xl text-[var(--surface-inverse-foreground)]">
+              Know the people behind RSP&apos;s parliamentary wins.
+            </h1>
+            <p
+              className="mt-5 max-w-2xl text-base leading-7 sm:text-lg"
+              style={{
+                color:
+                  "color-mix(in srgb, var(--surface-inverse-foreground) 76%, transparent)",
+              }}
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              Explore elected representatives through profiles, education, verified
+              links, constituency context, and detailed vote-performance data in a
+              single public directory.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="#directory"
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--surface-inverse-foreground)] px-5 py-3 text-sm font-semibold text-[var(--surface-inverse)] transition-transform hover:-translate-y-0.5"
+              >
+                Browse directory
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/analytics"
+                className="inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold text-[var(--surface-inverse-foreground)] transition-colors"
+                style={{
+                  borderColor: "var(--surface-inverse-border)",
+                  backgroundColor: "var(--surface-inverse-muted)",
+                }}
+              >
+                Open analytics
+                <ChartColumnBig className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 rounded-full border bg-transparent px-5 py-3 text-sm font-semibold transition-colors hover:text-[var(--surface-inverse-foreground)]"
+                style={{
+                  borderColor: "var(--surface-inverse-border)",
+                  color:
+                    "color-mix(in srgb, var(--surface-inverse-foreground) 80%, transparent)",
+                }}
+              >
+                Read methodology
+              </Link>
+            </div>
+
+            <div className="mt-10 grid gap-3 sm:grid-cols-3">
+              <HeroMetric
+                icon={<Users className="h-4 w-4" />}
+                label="Profiles tracked"
+                value={totalMPs}
+              />
+              <HeroMetric
+                icon={<Vote className="h-4 w-4" />}
+                label="FPTP races"
+                value={fptpCount}
+              />
+              <HeroMetric
+                icon={<ListChecks className="h-4 w-4" />}
+                label="PR seats"
+                value={prCount}
+              />
+            </div>
+          </div>
+
+          <div className="grid gap-6">
+            <div className="surface-card p-6 sm:p-7">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="section-kicker">Coverage snapshot</p>
+                  <h2 className="mt-2 font-display text-2xl font-semibold text-foreground">
+                    What is already mapped
+                  </h2>
+                </div>
+                <div className="rounded-full border border-border/80 bg-[var(--surface-soft)] p-2 text-[var(--rsp-blue)]">
+                  <Database className="h-4 w-4" />
+                </div>
+              </div>
+
+              <div className="mt-6 space-y-4">
+                <SnapshotRow
+                  label="Education records"
+                  value={`${withEducation}/${totalMPs}`}
+                  helper="Structured education details linked to candidate profiles."
+                />
+                <SnapshotRow
+                  label="Official social links"
+                  value={`${withSocials}/${totalMPs}`}
+                  helper="Only clearly official or verified pages are included."
+                />
+                <SnapshotRow
+                  label="Vote-share coverage"
+                  value={`${withVoteData}/${totalMPs}`}
+                  helper="Candidate pages and analytics now include vote performance."
+                />
+              </div>
+            </div>
+
+            <div className="surface-panel p-6 sm:p-7">
+              <div className="flex items-start gap-3">
+                <div className="rounded-full border border-border/80 bg-[var(--surface-soft)] p-2 text-[var(--rsp-green)]">
+                  <BadgeCheck className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="section-kicker">Why this version feels different</p>
+                  <p className="mt-2 text-base font-semibold text-foreground">
+                    The browsing experience is tuned like an election report, not a
+                    plain index.
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                    Search, filters, cards, analytics, and profile pages are being
+                    refit into a more editorial, higher-trust presentation inspired by
+                    newsroom-style results boards.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section id="directory" className="page-shell-wide page-section pt-2">
+        <div className="mb-6 grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+          <div className="space-y-3">
+            <p className="section-kicker">Browse the directory</p>
+            <h2 className="section-title max-w-4xl text-foreground">
+              Search by name, constituency, province, education, or election
+              performance.
+            </h2>
+            <p className="max-w-3xl text-sm leading-6 text-muted-foreground sm:text-base">
+              Every card surfaces the most important profile details first, while the
+              filter stack helps compare representation across provinces, election
+              types, demographics, and results.
+            </p>
+          </div>
+
+          <div className="surface-panel px-4 py-3 text-sm text-muted-foreground">
+            <span className="font-semibold text-foreground">{totalMPs}</span> MPs
+            indexed across direct and proportional seats.
+          </div>
         </div>
-      </main>
+
+        <CandidateGrid initialCandidates={candidates} />
+      </section>
+    </div>
+  );
+}
+
+function HeroMetric({
+  icon,
+  label,
+  value,
+}: {
+  icon: ReactNode;
+  label: string;
+  value: number;
+}) {
+  return (
+    <div
+      className="rounded-[1.5rem] border px-4 py-4 text-[var(--surface-inverse-foreground)]"
+      style={{
+        borderColor: "var(--surface-inverse-border)",
+        backgroundColor: "var(--surface-inverse-muted)",
+      }}
+    >
+      <div
+        className="flex items-center gap-2 text-sm"
+        style={{
+          color:
+            "color-mix(in srgb, var(--surface-inverse-foreground) 70%, transparent)",
+        }}
+      >
+        {icon}
+        <span>{label}</span>
+      </div>
+      <p className="numeric mt-3 text-3xl font-semibold">{value}</p>
+    </div>
+  );
+}
+
+function SnapshotRow({
+  label,
+  value,
+  helper,
+}: {
+  label: string;
+  value: string;
+  helper: string;
+}) {
+  return (
+    <div className="grid gap-2 border-t border-border/70 pt-4 first:border-t-0 first:pt-0 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+      <div>
+        <p className="text-sm font-semibold text-foreground">{label}</p>
+        <p className="mt-1 text-sm leading-6 text-muted-foreground">{helper}</p>
+      </div>
+      <div className="numeric text-2xl font-semibold text-foreground sm:text-right">
+        {value}
+      </div>
     </div>
   );
 }
