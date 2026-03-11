@@ -7,6 +7,7 @@ import { ChartColumnBig, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Directory" },
@@ -16,29 +17,36 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full pt-3 sm:pt-4">
+    <header className={cn("sticky top-0 z-50 w-full transition-all duration-300", scrolled ? "pt-1 sm:pt-1.5" : "pt-3 sm:pt-4")}>
       <div className="page-shell-wide">
         <div className="surface-panel overflow-hidden">
-          <div className="flex items-center justify-between gap-4 px-4 py-3 sm:px-6">
+          <div className={cn("flex items-center justify-between gap-4 px-4 sm:px-6 transition-all duration-300", scrolled ? "py-1.5" : "py-3")}>
             <div className="flex min-w-0 items-center gap-4">
               <Link href="/" className="flex min-w-0 items-center gap-3">
-                <div className="flex size-11 shrink-0 items-center justify-center rounded-2xl overflow-hidden shadow-sm ring-1 ring-border/50">
+                <div className={cn("shrink-0 flex items-center justify-center rounded-2xl overflow-hidden shadow-sm ring-1 ring-border/50 transition-all duration-300", scrolled ? "size-8" : "size-11")}>
                   <Image
                     src="/logo.png"
                     alt="Know RSP Logo"
                     width={44}
                     height={44}
-                    className="object-cover"
+                    className="object-cover w-full h-full"
                     priority
                   />
                 </div>
                 <div className="min-w-0">
-                  <p className="font-display truncate text-lg font-semibold text-foreground sm:text-xl">
+                  <p className={cn("font-display truncate font-semibold text-foreground transition-all duration-300", scrolled ? "text-base" : "text-lg sm:text-xl")}>
                     Know RSP
                   </p>
-                  <p className="truncate text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                  <p className={cn("truncate font-semibold uppercase tracking-[0.2em] text-muted-foreground transition-all duration-300", scrolled ? "text-[0.6rem]" : "text-[0.68rem]")}>
                     Nepal Election Directory
                   </p>
                 </div>
