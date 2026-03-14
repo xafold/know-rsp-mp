@@ -247,14 +247,14 @@ export default async function CandidateProfilePage({ params }: Props) {
           </div>
         </section>
 
-        {candidate.majorContributions && candidate.majorContributions.length > 0 && (
+        {candidate.contributions && candidate.contributions.length > 0 && (
           <section className="mt-6">
             <div className="surface-card overflow-hidden p-6 sm:p-8">
               <SectionHeader icon={<Trophy className="h-4 w-4" />}>
                 Notable Contributions
               </SectionHeader>
               <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {candidate.majorContributions.map((contribution, idx) => (
+                {candidate.contributions.map((contribution, idx) => (
                   <ContributionCard key={idx} contribution={contribution} />
                 ))}
               </div>
@@ -292,11 +292,11 @@ function StatsCard({ candidate }: { candidate: Candidate }) {
             value={`${candidate.voteSharePercent.toFixed(1)}%`}
           />
         )}
-        {candidate.totalValidVotes != null && (
+        {candidate.totalVotes != null && (
           <StatTile
             icon={<Trophy className="h-3.5 w-3.5" />}
             label="Total Votes"
-            value={candidate.totalValidVotes.toLocaleString()}
+            value={candidate.totalVotes.toLocaleString()}
           />
         )}
         {candidate.winMargin != null && (
@@ -310,7 +310,7 @@ function StatsCard({ candidate }: { candidate: Candidate }) {
 
       {candidate.voteSharePercent != null && (
         <div className="mt-4">
-          <VoteChart candidate={candidate} />
+          <VoteChart voteSharePercent={candidate.voteSharePercent} />
         </div>
       )}
     </div>
