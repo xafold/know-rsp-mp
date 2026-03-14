@@ -83,7 +83,24 @@ function getProvinceTone(province: string): string {
 }
 
 function formatDate(dateStr: string): string {
-  const d = new Date(dateStr);
+  // Handle year-only dates like "1966" by returning the year as-is,
+  // rather than assuming January 1st of that year.
+  if (/^\d{4}$/.test(dateStr)) {
+    return dateStr;
+  }
+
+  let d: Date;
+
+  // Handle date-only strings like "YYYY-MM-DD" in a timezone-stable way
+  // by constructing a UTC date, avoiding day shifts due to server timezone.
+  const dateOnlyMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateStr);
+  if (dateOnlyMatch) {
+    const [, year, month, day] = dateOnlyMatch;
+    d = new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)));
+  } else {
+    // Fallback for other formats (e.g., full ISO strings with time zone)
+    d = new Date(dateStr);
+  }
 
   if (isNaN(d.getTime())) {
     return dateStr;
@@ -93,6 +110,7 @@ function formatDate(dateStr: string): string {
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   });
 }
 
@@ -106,11 +124,9 @@ export default async function CandidateProfilePage({ params }: Props) {
 
   const topEducation = getTopEducation(candidate);
   const provinceTone = getProvinceTone(candidate.constituency.province);
-  const lastVerified = new Date(candidate.lastUpdated).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  const lastVerified = candidate.lastUpdated
+    ? formatDate(candidate.lastUpdated)
+    : "";
 
   const hasQuickFacts =
     candidate.dateOfBirth || candidate.age || candidate.profession || candidate.phone;
