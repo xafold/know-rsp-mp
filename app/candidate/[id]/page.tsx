@@ -83,16 +83,17 @@ function getProvinceTone(province: string): string {
 }
 
 function formatDate(dateStr: string): string {
-  try {
-    const d = new Date(dateStr);
-    return d.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  } catch {
+  const d = new Date(dateStr);
+
+  if (isNaN(d.getTime())) {
     return dateStr;
   }
+
+  return d.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 }
 
 export default async function CandidateProfilePage({ params }: Props) {
