@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getCandidates } from "@/lib/getCandidates";
 
-const BASE_URL = "https://knowrspcandidate.vercel.app";
+const BASE_URL = "https://knowrspmp.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const candidates = getCandidates();
@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const candidatePages: MetadataRoute.Sitemap = candidates.map((candidate) => ({
-    url: `${BASE_URL}/candidate/${candidate.id}`,
+    url: `${BASE_URL}/mp/${candidate.id}`,
     lastModified: new Date(candidate.lastUpdated),
     changeFrequency: "weekly" as const,
     priority: 0.8,

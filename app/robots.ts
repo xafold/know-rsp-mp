@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [],
       },
     ],
-    sitemap: "https://knowrspcandidate.vercel.app/sitemap.xml",
+    sitemap: "https://knowrspmp.vercel.app/sitemap.xml",
   };
 }
