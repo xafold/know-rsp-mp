@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: [],
+        disallow: ["/api/"],
       },
     ],
     sitemap: "https://knowrspmp.vercel.app/sitemap.xml",
