@@ -55,41 +55,24 @@ export default function HomePage() {
   const withSocials = candidates.filter((c) => c.socials?.length).length;
   const withVoteData = candidates.filter((c) => c.voteSharePercent != null).length;
 
-  const websiteJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Know RSP",
-    alternateName: "Know Your RSP Representative",
-    url: "https://knowrspmp.vercel.app",
-    description:
-      "A civic directory of RSP Members of Parliament from Nepal's 2026 General Election.",
-    publisher: {
-      "@type": "Organization",
-      name: "Know RSP",
-      url: "https://knowrspmp.vercel.app",
-    },
-  };
+  const SITE_URL = "https://knowrspmp.vercel.app";
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "RSP Members of Parliament",
-    description: "All RSP MPs elected in Nepal's 2026 General Election",
+    name: "RSP Members of Parliament — 2026 Nepal General Election",
+    description: "All Rastriya Swatantra Party (RSP) Members of Parliament elected in Nepal's 2026 General Election.",
     numberOfItems: totalMPs,
-    itemListElement: candidates.slice(0, 30).map((c, i) => ({
+    itemListElement: candidates.map((c, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `https://knowrspmp.vercel.app/candidate/${c.id}`,
+      url: `${SITE_URL}/candidate/${c.id}`,
       name: c.name,
     })),
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}

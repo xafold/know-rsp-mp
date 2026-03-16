@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "MP Not Found" };
   }
 
-  const title = `${candidate.name} – RSP MP, ${candidate.constituency.name}`;
+  const title = `${candidate.name} \u2013 RSP MP, ${candidate.constituency.name}`;
   const topEdu = getTopEducation(candidate);
   const eduSuffix = topEdu !== "N/A" ? ` Education: ${topEdu}.` : "";
   const ageSuffix = candidate.age ? ` Age: ${candidate.age}.` : "";
@@ -59,12 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `/candidate/${candidate.id}`,
       type: "profile",
       images: candidate.photo
-        ? [
-            {
-              url: candidate.photo,
-              alt: `Photo of ${candidate.name}, RSP MP from ${candidate.constituency.name}`,
-            },
-          ]
+        ? [{ url: candidate.photo, alt: `Photo of ${candidate.name}, RSP MP from ${candidate.constituency.name}` }]
         : [],
     },
     twitter: {
@@ -154,6 +149,8 @@ export default async function CandidateProfilePage({ params }: Props) {
   const hasQuickFacts =
     candidate.dateOfBirth || candidate.age || candidate.profession || candidate.phone;
 
+  const candidateUrl = `https://knowrspmp.vercel.app/candidate/${candidate.id}`;
+
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -170,15 +167,27 @@ export default async function CandidateProfilePage({ params }: Props) {
       "@type": "PoliticalParty",
       name: "Rastriya Swatantra Party (RSP)",
     },
-    url: `https://knowrspmp.vercel.app/candidate/${candidate.id}`,
+    memberOf: [
+      { "@type": "PoliticalParty", name: "Rastriya Swatantra Party" },
+      { "@type": "GovernmentOrganization", name: "Parliament of Nepal" },
+    ],
+    alumniOf: candidate.education
+      ?.filter((e) => e.institution)
+      .map((e) => ({
+        "@type": "EducationalOrganization",
+        name: e.institution,
+        ...(e.degree ? { award: e.degree } : {}),
+      })),
+    knowsAbout: [
+      ...new Set(
+        candidate.majorContributions?.map((c) => c.category).filter(Boolean) ?? []
+      ),
+    ],
+    url: candidateUrl,
     image: candidate.photo || undefined,
     description: candidate.biography || `${candidate.name} is a Member of Parliament representing ${candidate.constituency.name}, ${candidate.constituency.province} in Nepal's 2026 General Election.`,
-    nationality: {
-      "@type": "Country",
-      name: "Nepal",
-    },
+    nationality: { "@type": "Country", name: "Nepal" },
     sameAs: candidate.socials?.map((social) => social.url) ?? [],
-    knowsAbout: candidate.profession || undefined,
   };
 
   const breadcrumbJsonLd = {
@@ -195,7 +204,7 @@ export default async function CandidateProfilePage({ params }: Props) {
         "@type": "ListItem",
         position: 2,
         name: candidate.name,
-        item: `https://knowrspmp.vercel.app/candidate/${candidate.id}`,
+        item: candidateUrl,
       },
     ],
   };

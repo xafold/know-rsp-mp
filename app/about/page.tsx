@@ -20,10 +20,18 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Know RSP – Methodology & Sources",
+    title: "About Know RSP \u2013 Methodology & Sources",
     description:
       "Learn how Know RSP verifies and presents RSP MP data. Methodology, primary sources, and project principles.",
     url: "/about",
+    images: [{ url: "/rsp-share-preview.jpg", width: 1024, height: 576, alt: "Know RSP share preview" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Know RSP \u2013 Methodology & Sources",
+    description:
+      "Learn how Know RSP verifies and presents RSP MP data. Methodology, primary sources, and project principles.",
+    images: ["/rsp-share-preview.jpg"],
   },
 };
 

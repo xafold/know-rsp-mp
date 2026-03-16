@@ -1,0 +1,19 @@
+# Know RSP
+> A civic transparency directory for RSP (Rastriya Swatantra Party) Members of Parliament elected in Nepal's 2026 General Election.
+
+Know RSP provides structured, searchable profiles for all RSP MPs, including education history, biographical information, election performance (votes, win margins, vote share), constituency details, and official source links. The data is manually verified from official sources including the Election Commission of Nepal and Parliament of Nepal.
+
+## Key pages
+- /: Full MP directory with search and filters
+- /analytics: Election analytics dashboard (vote shares, demographics, province breakdowns)
+- /candidate/{id}: Individual MP profiles (e.g., /candidate/balen-shah)
+- /compare: Side-by-side MP comparison tool
+- /about: Data methodology and sourcing
+
+## Coverage
+- All RSP MPs elected in the March 2026 Nepal General Election
+- Both FPTP (First Past The Post) and PR (Proportional Representation) elected MPs
+- 7 provinces: Koshi, Madhesh, Bagmati, Gandaki, Lumbini, Karnali, Sudurpashchim
+
+## About RSP (Rastriya Swatantra Party)
+RSP is a Nepalese political party that won parliamentary seats in the 2026 General Election. This site is independent and not affiliated with RSP.

@@ -52,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const candidatePages: MetadataRoute.Sitemap = candidates.map((candidate) => ({
-    url: `${BASE_URL}/mp/${candidate.id}`,
+    url: `${BASE_URL}/candidate/${candidate.id}`,
     lastModified: new Date(candidate.lastUpdated),
     changeFrequency: "weekly" as const,
     priority: 0.8,

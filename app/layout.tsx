@@ -98,6 +98,36 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${outfit.variable} ${sourceSans3.variable} min-h-screen`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Know RSP",
+              url: SITE_URL,
+              description:
+                "A searchable civic directory of Rastriya Swatantra Party (RSP) Members of Parliament from Nepal's 2026 General Election.",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${SITE_URL}/?q={search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Know RSP",
+              url: SITE_URL,
+              sameAs: ["https://github.com/xafold/know-rsp-mp"],
+            }),
+          }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
